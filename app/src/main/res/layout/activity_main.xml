@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/tvInitAmount"
+        android:hint="Enter Initial Amount"
+        android:maxEms="10"
+        android:inputType="numberDecimal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rgMeasurements"
+        android:layout_below="@+id/tvInitAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbGrams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Grams"/>
+        <RadioButton
+            android:id="@+id/rbOunces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Ounces"/>
+        <RadioButton
+            android:id="@+id/rbPounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Pounds"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_centerHorizontal="true"
+        android:text="Convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgMeasurements" />
+
+<LinearLayout
+    android:layout_below="@+id/top_layout"
+    android:weightSum="3"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        style="@style/CodeFont"
+        android:layout_weight="1"
+        android:id="@+id/tvGrams" />
+    <TextView
+        style="@style/CodeFont"
+        android:layout_weight="1"
+        android:id="@+id/tvOunces" />
+    <TextView
+        style="@style/CodeFont"
+        android:layout_weight="1"
+        android:id="@+id/tvPounds" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_layout"
+        android:weightSum="3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grams" />
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ounces"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pounds"/>
+    </LinearLayout>
+</RelativeLayout>
