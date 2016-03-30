@@ -3,94 +3,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/tvInitAmount"
-        android:hint="Enter Initial Amount"
-        android:maxEms="10"
-        android:maxLength="6"
-        android:inputType="numberDecimal"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <RadioGroup
-        android:id="@+id/rgMeasurements"
-        android:layout_below="@+id/tvInitAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/rbGrams"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Grams"/>
-        <RadioButton
-            android:id="@+id/rbOunces"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Ounces"/>
-        <RadioButton
-            android:id="@+id/rbPounds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Pounds"/>
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/btnConvert"
-        android:layout_centerHorizontal="true"
-        android:text="Convert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rgMeasurements" />
-
-<LinearLayout
-    android:layout_below="@+id/top_layout"
-    android:weightSum="3"
-    android:gravity="center"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        style="@style/CodeFont"
-        android:layout_weight="1"
-        android:id="@+id/tvGrams" />
-    <TextView
-        style="@style/CodeFont"
-        android:layout_weight="1"
-        android:id="@+id/tvOunces" />
-    <TextView
-        style="@style/CodeFont"
-        android:layout_weight="1"
-        android:id="@+id/tvPounds" />
-</LinearLayout>
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:id="@+id/top_layout"
-        android:weightSum="3"
+        android:weightSum="4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:gravity="center"
+            style="@style/TittleFont"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grams" />
+            android:text="@string/grams" />
         <TextView
-            android:gravity="center"
+            style="@style/TittleFont"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ounces"/>
+            android:text="@string/kilograms" />
         <TextView
-            android:gravity="center"
+            style="@style/TittleFont"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pounds"/>
+            android:text="@string/ounces"/>
+        <TextView
+            style="@style/TittleFont"
+            android:layout_weight="1"
+            android:text="@string/pounds"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/top_layout"
+        android:weightSum="4"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            style="@style/CodeFont"
+            android:layout_weight="1"
+            android:id="@+id/etGrams" />
+        <EditText
+            style="@style/CodeFont"
+            android:layout_weight="1"
+            android:id="@+id/etKiloGrams" />
+        <EditText
+            style="@style/CodeFont"
+            android:layout_weight="1"
+            android:id="@+id/etOunces" />
+        <EditText
+            style="@style/CodeFont"
+            android:layout_weight="1"
+            android:id="@+id/etPounds" />
     </LinearLayout>
 </RelativeLayout>
